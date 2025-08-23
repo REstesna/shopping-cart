@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+
+@theme{
+    --breakpoint-bs: 360px;
+    --breakpoint-bm: 460px;
+}
+
+body {
+        @apply bg-[var(--main-white-color)] text-[var(--main-black-color)];
+}
+
+
+.my_container{
+    @apply mx-auto px-4 bm:px-6 ;
+
+}
+
+
+/* /////////////////////////// product styles //////////////////////////////////  */
+
+.product_container{
+    @apply border border-[var(--second-white-color)] rounded-[20px] overflow-hidden  flex flex-col gap-4 bg-[var(--second-white-color)]/40  max-w-[500px];
+}
+.product-img_container {
+    @apply w-full rounded-[20px] overflow-hidden aspect-[16/9] flex justify-center items-center ;
+}
+.product-img_container img{
+    @apply w-full h-full;
+}
+.product_title{
+    @apply text-2xl  capitalize px-2 capitalize; 
+}
+.product_description {
+    @apply text-[var(--second-black-color)] px-2  max-w-full;
+}
+.product-span_style{
+    @apply px-2 text-[var(--second-black-color)]  capitalize;
+}
+.add-to-cart_btn {
+    @apply capitalize bg-[var(--blue-color)] text-[var(--static-white-color)] cursor-pointer rounded-full px-4 py-2 flex justify-center items-center gap-2 outline-0;
+}
+.stars{
+    @apply relative max-w-max text-xl inline-block;
+}
+.stars__bg{
+    @apply text-[#cdcdcd]
+}
+.stars__fg{ 
+    @apply absolute top-0 left-0 text-[#ffff00] w-[50%] overflow-hidden
+}
+
+/* ///// basket  */
+
+#trach__svg-icon{
+    @apply hidden;
+}
+.last_prodcut #trach__svg-icon{
+    @apply block;
+}
+.last_prodcut #minus__svg-icon {
+    @apply hidden;
+}

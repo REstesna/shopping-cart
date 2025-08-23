@@ -1,0 +1,46 @@
+@import "tailwindcss";
+@import url(main.css);
+
+
+.login .signup-parent , .signup .login-password{
+    @apply hidden;
+}
+
+.login{
+    @apply max-h-[180px];
+}
+
+.signup{
+    @apply max-h-[320px];
+
+}
+
+
+
+.loader {
+  width: 15px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  animation: l5 1s infinite linear alternate;
+}
+@keyframes l5 {
+    0%  {box-shadow: 20px 0 #000, -20px 0 #0002;background: #000 }
+    33% {box-shadow: 20px 0 #000, -20px 0 #0002;background: #0002}
+    66% {box-shadow: 20px 0 #0002,-20px 0 #000; background: #0002}
+    100%{box-shadow: 20px 0 #0002,-20px 0 #000; background: #000 }
+}
+
+
+
+#close-eye-icon{
+    @apply block;
+}
+#open-eye-icon{
+    @apply hidden;
+}
+.open-eye #open-eye-icon{
+    @apply block;
+}
+.open-eye #close-eye-icon{
+    @apply hidden;
+}

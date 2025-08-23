@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dist/index.css">
+    <link rel="stylesheet" href="inputCSS/main.css">
+    <link rel="stylesheet" href="libs/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="libs/Notyf/notyf.min.css">
+    <script src="libs/sweetalert/sweetalert2@11.js"></script>
+    <title>Shopping Card</title>
+</head>
+
+<body class="dark_theme">
+
+
+    <nav
+        class="border-b border-[var(--second-white-color)] py-2 sticky top-0 z-50 bg-[var(--main-white-color)]/80 backdrop-blur-[6px] ">
+
+
+        <div class="flex items-center justify-between my_container lg:max-w-full!">
+
+            <!-- left section  -->
+            <div class="flex items-center justify-center">
+                <!-- menu button  -->
+                <button id="menu__btn" class="cursor-pointer">
+                    <svg class="" width="25" height="25" viewBox="0 0 20 20" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.5 5.83325H17.5" stroke="#0D0C0D" stroke-width="1.25" stroke-linecap="round" />
+                        <path d="M2.5 10H17.5" stroke="#0D0C0D" stroke-width="1.25" stroke-linecap="round" />
+                        <path d="M2.5 14.1667H17.5" stroke="#0D0C0D" stroke-width="1.25" stroke-linecap="round" />
+                    </svg>
+
+                </button>
+            </div>
+
+
+            <a href="#" class="bm:flex hidden justify-center items-center gap-1">
+                <img src="icon/fav.png" class="sm:w-8 w-6 sm:h-8 h-6" alt="">
+                <h1 class="text-xl text-[var(--blue-color)] main-font-700">RElax</h1>
+            </a>
+
+
+            <!-- cart button  -->
+
+            <a href="/cart.html"
+                class="main-font-300 cursor-pointer flex items-center justify-between gap-2 bg-[var(--blue-color)]/20 py-1 px-2 rounded-full">
+                <div
+                    class="flex gap-2 items-center justify-center px-2 py-1 bg-[var(--main-white-color)]/50 rounded-full">
+                    <img src="icon/Buy.svg" alt="buy">
+                    <span id="count-of-procucts">0</span>
+                </div>
+                <span>Cart</span>
+            </a>
+
+
+        </div>
+
+
+
+
+    </nav>
+
+    <!-- menu  -->
+    <!-- add /show_menu/ class to show menu  -->
+    <section id="menu" class="fixed inset-0 z-[99999] bg-[var(--second-black-color)]/50 invisible">
+
+        <div id="menu__container"
+            class="w-[350px] bg-[var(--main-white-color)] backdrop-blur-xl py-4 h-full px-4 origin-left scale-x-0">
+
+            <div class="flex justify-between items-center">
+                <a href="#" class="flex  justify-center items-center gap-2 sm:gap-4 ">
+                    <img src="icon/fav.png" class="sm:w-8 w-6 sm:h-8 h-6" alt="">
+                    <h1 class="text-xl text-[var(--blue-color)] main-font-700">RElax</h1>
+                </a>
+                <button id="close__menu-btn" class="cursor-pointer">
+                    <svg class="fill-[var(--main-black-color)]" width="20px" height="20px" viewBox="0 0 32 32"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18.8,16l5.5-5.5c0.8-0.8,0.8-2,0-2.8l0,0C24,7.3,23.5,7,23,7c-0.5,0-1,0.2-1.4,0.6L16,13.2l-5.5-5.5  c-0.8-0.8-2.1-0.8-2.8,0C7.3,8,7,8.5,7,9.1s0.2,1,0.6,1.4l5.5,5.5l-5.5,5.5C7.3,21.9,7,22.4,7,23c0,0.5,0.2,1,0.6,1.4  C8,24.8,8.5,25,9,25c0.5,0,1-0.2,1.4-0.6l5.5-5.5l5.5,5.5c0.8,0.8,2.1,0.8,2.8,0c0.8-0.8,0.8-2.1,0-2.8L18.8,16z" />
+                    </svg>
+                </button>
+            </div>
+
+
+
+
+            <!-- dark / light button  -->
+            <button id="change_theme-btn" class="btn_style  mt-8!">
+                <!-- sun -->
+                <svg id="sun_svg" width="25px" height="25px" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2V3" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" />
+                    <path d="M12 21V22" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" />
+                    <path d="M22 12L21 12" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" />
+                    <path d="M3 12L2 12" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" />
+                    <path d="M19.0708 4.92969L18.678 5.32252" stroke="#1C274C" stroke-width="1.5"
+                        stroke-linecap="round" />
+                    <path d="M5.32178 18.6777L4.92894 19.0706" stroke="#1C274C" stroke-width="1.5"
+                        stroke-linecap="round" />
+                    <path d="M19.0708 19.0703L18.678 18.6775" stroke="#1C274C" stroke-width="1.5"
+                        stroke-linecap="round" />
+                    <path d="M5.32178 5.32227L4.92894 4.92943" stroke="#1C274C" stroke-width="1.5"
+                        stroke-linecap="round" />
+                    <path
+                        d="M6.34141 10C6.12031 10.6256 6 11.2987 6 12C6 15.3137 8.68629 18 12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C11.2987 6 10.6256 6.12031 10 6.34141"
+                        stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+                <!-- moon -->
+                <svg id="moon_svg" width="25px" height="25px" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M11.203 6.02337C7.59276 6.99074 5.45107 10.6948 6.41557 14.2943C7.38006 17.8938 11.0868 20.0307 14.6971 19.0634C16.1096 18.6849 17.2975 17.8877 18.1626 16.8409C15.1968 17.3646 12.2709 15.546 11.4775 12.585C10.7644 9.92365 12.0047 7.20008 14.3182 5.92871C13.3186 5.72294 12.2569 5.74098 11.203 6.02337ZM4.96668 14.6825C3.78704 10.2801 6.40707 5.75553 10.8148 4.57448C12.968 3.99752 15.1519 4.3254 16.9581 5.32413L16.6781 6.72587C16.4602 6.75011 16.241 6.79108 16.0218 6.8498C13.6871 7.47537 12.303 9.8703 12.9264 12.1968C13.5497 14.5233 15.9459 15.9053 18.2806 15.2797C18.7257 15.1604 19.1351 14.9774 19.5024 14.7435L20.5991 15.6609C19.6542 17.9633 17.6796 19.8171 15.0853 20.5123C10.6776 21.6933 6.14631 19.085 4.96668 14.6825Z"
+                        fill="#080341" />
+                </svg>
+            </button>
+
+
+
+            <a id="login__btn"
+                class="w-full px-6 rounded-full mt-4 border border-[var(--blue-color)] py-2  flex justify-center items-center gap-4 main-font-300"
+                href="/login.html">
+                <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="6" r="4" stroke="#1C274C" stroke-width="1.5" />
+                    <path
+                        d="M15 20.6151C14.0907 20.8619 13.0736 21 12 21C8.13401 21 5 19.2091 5 17C5 14.7909 8.13401 13 12 13C15.866 13 19 14.7909 19 17C19 17.3453 18.9234 17.6804 18.7795 18"
+                        stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+
+                Login
+            </a>
+
+            <button id="logout__btn"
+                class="w-full px-6 cursor-pointer rounded-full mt-4 border border-red-500 text-red-500 py-2  flex justify-center items-center gap-4 main-font-300">
+                <svg width="22px" height="22px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 12L2 12M2 12L5.5 9M2 12L5.5 15" class="stroke-red-500!" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                        d="M9.00195 7C9.01406 4.82497 9.11051 3.64706 9.87889 2.87868C10.7576 2 12.1718 2 15.0002 2L16.0002 2C18.8286 2 20.2429 2 21.1215 2.87868C22.0002 3.75736 22.0002 5.17157 22.0002 8L22.0002 16C22.0002 18.8284 22.0002 20.2426 21.1215 21.1213C20.3531 21.8897 19.1752 21.9862 17 21.9983M9.00195 17C9.01406 19.175 9.11051 20.3529 9.87889 21.1213C10.5202 21.7626 11.4467 21.9359 13 21.9827"
+                        class="stroke-red-500!" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+                Logout
+            </button>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <header class="container">
+
+        <!-- search box -->
+        <!-- <div class="border border-[var(--second-white-color)] rounded-full p-3 px-4 mt-2 max-w-[700px] mx-auto">
+            <div class="flex justify-between items-center">
+                <img src="icon/Group.svg" alt="search">
+                <input class="w-full outline-0 h-full px-2 main-font-300 placeholder:text-[var(--main-black-color)]/50"
+                    type="text" placeholder="Search...">
+            </div>
+        </div> -->
+
+    </header>
+
+
+
+    <main>
+
+        <h2 class="text-center text-5xl mt-16 main-font-900">Products</h2>
+        <!-- products -->
+        <section id="products__conatainer"
+            class="my_container pt-16  grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-4 justify-center justify-items-center">
+
+            
+            
+
+         
+
+
+
+
+
+        </section>
+
+        <!-- pagination  -->
+        <section class="mb-10">
+
+            <ul class="flex justify-center items-center gap-2 mt-10">
+                <li id="prev_pagination" class="pagination_item">
+                    <img class="rotate-180" src="icon/arrow-right.svg" alt="arrow">
+                </li>
+
+                <ul id="pagination__items_container" class="flex justify-center items-center gap-2">
+                    <!-- <li class="pagination_item" data-current-pgae="1">1</li>
+                    <li class="pagination_item">2</li> -->
+                </ul>
+
+                <li id="next_pagination" class="pagination_item">
+                    <img src="icon/arrow-right.svg" alt="arrow">
+                </li>
+            </ul>
+
+        </section>
+    </main>
+
+
+
+
+    <script src="libs/Notyf/notyf.min.js"></script>
+    <script src="libs/jsCookie/js.cookie.min.js"></script>
+    <script src="libs/sweetalert/sweetalert2@11.js"></script>
+    <script type="module" src="js/index.js"></script>
+    <script type="module" src="js/design.js"></script>
+    <script type="module" src="js/localTheme.js"></script>
+
+
+</body>
+
+</html>

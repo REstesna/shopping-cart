@@ -1,0 +1,77 @@
+
+@font-face {
+    font-family: "Inter";
+    src: url("../font/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+    /* font-weight: 100 900;  */
+    /* font-style: normal; */
+}
+
+
+:root{
+    --main-font: "inter", sans-serif;
+
+    --border-radius: 12px;
+
+    --static-black-color: #0D0C0D;
+
+    --main-black-color: #0D0C0D;
+    --second-black-color: #3E3B3F;
+
+    --static-white-color: #F8F7F8;
+    
+    --main-white-color: #F8F7F8;
+    --second-white-color: #DDDADD;
+
+    --blue-color: #006aff;
+    /* --dark-purple-color: #83256B; */
+
+    --orange-color: #F5551B;
+}
+.dark_theme{
+
+
+    /* --main-black-color: #0D0C0D;
+    --second-black-color: #3E3B3F; */
+
+    --main-black-color: #F8F7F8;
+    --second-black-color: #DDDADD;
+
+    
+    --main-white-color: #0D0C0D;
+    --second-white-color: #3E3B3F;
+    
+    /* --main-white-color: #F8F7F8;
+    --second-white-color: #DDDADD; */
+
+
+}
+
+::selection{
+    background-color: var(--main-black-color);
+    color: var(--main-white-color);
+}
+
+button {
+    outline: 0;
+}
+
+.main-font-100{
+    font-family: "inter";
+    font-weight: 100;
+}
+.main-font-300{
+    font-family: "inter";
+    font-weight: 300;
+}
+.main-font-700{
+    font-family: "inter";
+    font-weight: 700;
+}
+.main-font-900{
+    font-family: "inter";
+    font-weight: 900;
+}
+
+
+
+

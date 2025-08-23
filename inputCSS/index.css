@@ -1,0 +1,124 @@
+@import "tailwindcss";
+@import url(main.css);
+
+
+*{
+    @apply transition-all duration-300 ease-in-out;
+}
+
+@theme{
+    --breakpoint-bs: 360px;
+    --breakpoint-bm: 460px;
+}
+
+body{
+    @apply bg-[var(--main-white-color)] text-[var(--main-black-color)];
+}
+
+.container{
+    @apply mx-auto px-1 bm:px-6 ;
+}
+
+.my_container{
+    @apply mx-auto px-4 bm:px-6 ;
+
+}
+
+svg path{
+    stroke: var(--main-black-color) ;
+}
+
+#moon_svg path{
+    fill: var(--main-black-color);
+}
+ #basket_icon circle {
+    stroke: var(--static-white-color) ;
+}
+ #basket_icon path {
+    stroke: var(--static-white-color) ;
+}
+
+svg circle{
+    stroke: var(--main-black-color) ;
+}
+
+.btn_style{
+    @apply w-full px-6 rounded-full border border-[var(--blue-color)] py-2 mt-8 flex justify-center items-center gap-4 cursor-pointer;
+}
+
+.show_menu, .show_basket{
+    @apply visible;
+}
+.show_menu > div, .show_basket > div{
+    @apply scale-x-100!;
+}
+
+.pagination_item{
+    @apply p-2 min-w-10 flex justify-center items-center text-[var(--static-white-color)] cursor-pointer rounded-[var(--border-radius)] bg-[var(--blue-color)]
+}
+
+/* /////////////////////////// product styles //////////////////////////////////  */
+
+.product_container{
+    @apply border border-[var(--second-white-color)] rounded-[20px] overflow-hidden  flex flex-col gap-4 bg-[var(--second-white-color)]/40  max-w-[500px] ;
+}
+.product-img_container {
+    @apply w-full rounded-[20px] overflow-hidden aspect-[16/9] flex justify-center items-center ;
+}
+.product-img_container img{
+    @apply w-full h-full;
+}
+.product_title{
+    @apply text-2xl  capitalize px-2 h-[64px] capitalize;
+}
+.product_description {
+    @apply text-[var(--second-black-color)] px-2  max-w-full;
+}
+.product-span_style{
+    @apply px-2 text-[var(--second-black-color)]  capitalize;
+}
+.add-to-cart_btn {
+    @apply capitalize bg-[var(--blue-color)] text-[var(--static-white-color)] cursor-pointer rounded-full px-4 py-2 flex justify-center items-center gap-2 outline-0;
+}
+
+.stars{
+    @apply relative max-w-max text-xl inline-block;
+}
+.stars__bg{
+    @apply text-[#cdcdcd]
+}
+.stars__fg{ 
+    @apply absolute top-0 left-0 text-[#ffff00] overflow-hidden;
+}
+/* /////////////// */
+
+.side_bar-container{
+    @apply fixed inset-0 bg-[var(--second-black-color)]/50 invisible;
+}
+
+.side_bar{
+    @apply w-[350px] bg-[var(--main-white-color)] backdrop-blur-xl py-4 h-full px-2 origin-left scale-x-0;
+}
+
+/* /////////////// */
+/* pagination  */
+
+.active_pagination {
+    @apply bg-sky-400;
+}
+
+
+/* /////////////////// */
+
+#sun_svg{
+    @apply hidden;
+}
+.dark_theme #moon_svg{
+    @apply hidden;
+}
+.dark_theme #sun_svg{
+    @apply block;
+}
+
+
+

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/login.css">
+    <link rel="stylesheet" href="inputCSS/main.css">
+    <title>Document</title>
+</head>
+
+<body class="text-[var(--main-black-color)] bg-[var(--main-white-color)] dark_theme">
+
+    <nav class="border-b border-[var(--second-white-color)] py-4 flex justify-center items-center">
+        <a href="/index.html" class="flex justify-center items-center gap-4">
+            <img src="icon/fav.png" class="w-8 h-8" alt="">
+            <h1 class="text-2xl text-[var(--blue-color)] main-font-700">RElax</h1>
+        </a>
+    </nav>
+
+    <form action="">
+        <div class="max-w-[340px] mx-auto sm:mt-24 mt-16 rounded-[var(--border-radius)] py-2 px-2">
+            <h3 class="text-center main-font-700 text-xl">Login / Sign Up</h3>
+
+
+
+            <!-- add /login/ class for login and /signup/ class for signup -->
+            <div id="login-container"
+                class="flex flex-col mt-8 max-h-[88px] overflow-hidden transition-all duration-1000">
+
+                <div class="flex flex-col gap-1">
+                    <label class="main-font-300 text-sm" for="username">Username: </label>
+                    <input id="username"
+                        class="border-2 px-4 py-2 outline-0 rounded-[var(--border-radius)] border-[var(--second-white-color)]"
+                        type="text" autocomplete="off" required>
+                    <p class="text-[12px] text-center opacity-60">Only English letters, numbers (0-9), and _ allowed</p>
+                </div>
+
+                <!-- password for login -->
+                <div class="flex flex-col gap-1 login-password mt-2">
+                    <label class="main-font-300 text-sm" for="login-password">Password:</label>
+                    
+                    <div
+                    class="border-[var(--second-white-color)] border-2 rounded-[var(--border-radius)] flex justify-between items-center">
+                    <input id="login-password"
+                        class=" px-4 py-2 outline-0  "
+                        type="password" autocomplete="off" required>
+
+                            <!-- add /open-eye/ class to show open eye icon  -->
+                            <button id="show-login-password-btn" type="button" class="cursor-pointer px-2">
+
+                                <svg id="close-eye-icon" width="25px" height="25px" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M14.83 9.17999C14.2706 8.61995 13.5576 8.23846 12.7813 8.08386C12.0049 7.92926 11.2002 8.00851 10.4689 8.31152C9.73758 8.61453 9.11264 9.12769 8.67316 9.78607C8.23367 10.4444 7.99938 11.2184 8 12.01C7.99916 13.0663 8.41619 14.08 9.16004 14.83"
+                                        class="stroke-[var(--main-black-color)]/80" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M12 16.01C13.0609 16.01 14.0783 15.5886 14.8284 14.8384C15.5786 14.0883 16 13.0709 16 12.01"
+                                        class="stroke-[var(--main-black-color)]/80" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M17.61 6.39004L6.38 17.62C4.6208 15.9966 3.14099 14.0944 2 11.99C6.71 3.76002 12.44 1.89004 17.61 6.39004Z"
+                                        class="stroke-[var(--main-black-color)]/80" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M20.9994 3L17.6094 6.39" class="stroke-[var(--main-black-color)]/80" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M6.38 17.62L3 21" class="stroke-[var(--main-black-color)]/80" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                        d="M19.5695 8.42999C20.4801 9.55186 21.2931 10.7496 21.9995 12.01C17.9995 19.01 13.2695 21.4 8.76953 19.23"
+                                        class="stroke-[var(--main-black-color)]/80" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                                <svg id="open-eye-icon" width="25px" height="25px" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 16.01C14.2091 16.01 16 14.2191 16 12.01C16 9.80087 14.2091 8.01001 12 8.01001C9.79086 8.01001 8 9.80087 8 12.01C8 14.2191 9.79086 16.01 12 16.01Z"
+                                        class="stroke-[var(--main-black-color)]/80" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M2 11.98C8.09 1.31996 15.91 1.32996 22 11.98" class="stroke-[var(--main-black-color)]/80"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M22 12.01C15.91 22.67 8.09 22.66 2 12.01" class="stroke-[var(--main-black-color)]/80"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                </div>
+
+
+
+                <!-- sign up -->
+                <div class="signup-parent mt-2 flex flex-col gap-2">
+                    <div class="flex flex-col gap-1">
+                        <label class="main-font-300 text-sm" for="signup-name">Name:</label>
+                        <div
+                            class="border-[var(--second-white-color)] border-2 rounded-[var(--border-radius)] flex justify-between items-center">
+                            <input id="signup-name" class="w-full px-4 py-2 outline-0 " type="text" required>
+                            <span id="signup-name-span"
+                                class="px-2 border-l border-l-[var(--second-white-color)] opacity-80">20</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <label class="main-font-300 text-sm" for="signup-lastname">Lastname:</label>
+                        <div
+                            class="border-[var(--second-white-color)] border-2 rounded-[var(--border-radius)] flex justify-between items-center">
+                            <input id="signup-lastname" class="px-4 py-2 outline-0" type="text" required>
+                            <span id="signup-lastname-span"
+                                class="px-2 border-l border-l-[var(--second-white-color)] opacity-80">20</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <label class="main-font-300 text-sm" for="signup-password">Password:</label>
+                        <div
+                            class="border-[var(--second-white-color)] border-2 rounded-[var(--border-radius)] flex justify-between items-center">
+                            <input id="signup-password" class="px-4 py-2 outline-0 w-full" type="password" required>
+
+                            <!-- add /open-eye/ class to show open eye icon  -->
+                            <button id="show-password-btn" type="button" class="cursor-pointer px-2">
+
+                                <svg id="close-eye-icon" width="25px" height="25px" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M14.83 9.17999C14.2706 8.61995 13.5576 8.23846 12.7813 8.08386C12.0049 7.92926 11.2002 8.00851 10.4689 8.31152C9.73758 8.61453 9.11264 9.12769 8.67316 9.78607C8.23367 10.4444 7.99938 11.2184 8 12.01C7.99916 13.0663 8.41619 14.08 9.16004 14.83"
+                                        class="stroke-[var(--main-black-color)]/80" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M12 16.01C13.0609 16.01 14.0783 15.5886 14.8284 14.8384C15.5786 14.0883 16 13.0709 16 12.01"
+                                        class="stroke-[var(--main-black-color)]/80" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M17.61 6.39004L6.38 17.62C4.6208 15.9966 3.14099 14.0944 2 11.99C6.71 3.76002 12.44 1.89004 17.61 6.39004Z"
+                                        class="stroke-[var(--main-black-color)]/80" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M20.9994 3L17.6094 6.39" class="stroke-[var(--main-black-color)]/80" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M6.38 17.62L3 21" class="stroke-[var(--main-black-color)]/80" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                        d="M19.5695 8.42999C20.4801 9.55186 21.2931 10.7496 21.9995 12.01C17.9995 19.01 13.2695 21.4 8.76953 19.23"
+                                        class="stroke-[var(--main-black-color)]/80" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                                <svg id="open-eye-icon" width="25px" height="25px" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 16.01C14.2091 16.01 16 14.2191 16 12.01C16 9.80087 14.2091 8.01001 12 8.01001C9.79086 8.01001 8 9.80087 8 12.01C8 14.2191 9.79086 16.01 12 16.01Z"
+                                        class="stroke-[var(--main-black-color)]/80" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M2 11.98C8.09 1.31996 15.91 1.32996 22 11.98" class="stroke-[var(--main-black-color)]/80"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M22 12.01C15.91 22.67 8.09 22.66 2 12.01" class="stroke-[var(--main-black-color)]/80"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <button id="login-btn"
+                class="bg-[var(--blue-color)] mt-6 cursor-pointer py-2 rounded-full gap-1 text-[var(--static-white-color)] main-font-700 flex justify-center items-center w-full "
+                type="button">
+                Continue
+                <img src="icon/arrow-right.svg" alt="">
+            </button>
+        </div>
+    </form>
+
+
+    <script src="libs/jsCookie/js.cookie.min.js"></script>
+    <script src="libs/sweetalert/sweetalert2@11.js"></script>
+    <script type="module" src="js/localTheme.js"></script>
+    <script type="module" src="js/login.js"></script>
+
+
+
+</body>
+
+</html>
