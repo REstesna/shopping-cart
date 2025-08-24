@@ -30,6 +30,7 @@ document.addEventListener('click', e => {
 
 
 const isUserExist = Cookies.get('username');
+
 if (!isUserExist) {
     
     swalWithBootstrapButtons
@@ -161,7 +162,9 @@ userState.subscribe(sayHiToUserHandler)
 
 document.querySelector('#day_show').innerHTML = daysArr[date.getDay() ];
 
-Swal.fire("discount-code is [relax] :))))");
+setTimeout( () => {
+    Swal.fire("discount-code is [relax] :))))");
+} , 20000)
 
 console.log('%c discount-code is [relax] :))))', 'color:yellow;' );
 
