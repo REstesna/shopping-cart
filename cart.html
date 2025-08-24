@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/inputCSS/main.css">
+    <link rel="shortcut icon" href="icon/fav.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="libs/Notyf/notyf.min.css">
+
     <link rel="stylesheet" href="/dist/cart.css">
     <title>Cart</title>
 </head>
@@ -180,7 +186,7 @@
             <div class="flex justify-between">
                 <h2 class="text-xl main-font-700">You might like</h2>
                 <div class="flex items-center gap-2">
-                    <button class="cursor-pointer p-1 rounded-full border border-[var(--second-white-color)]">
+                    <button id="s-prev" class="cursor-pointer p-1 rounded-full border border-[var(--second-white-color)] ">
                         <svg class="rotate-180" width="24" height="25" viewBox="0 0 24 25" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -190,7 +196,7 @@
                         </svg>
 
                     </button>
-                    <button class="cursor-pointer p-1 rounded-full border border-[var(--second-white-color)]">
+                    <button id="s-next" class="cursor-pointer p-1 rounded-full border border-[var(--second-white-color)] ">
                         <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M8.91016 20.6012L15.4302 14.0812C16.2002 13.3112 16.2002 12.0512 15.4302 11.2812L8.91016 4.76123"
@@ -201,12 +207,18 @@
                 </div>
             </div>
 
-            <div class="mt-6">
-                <!-- product template -->
-               
+            <div class="swiper">
 
+                <div id="sug-product-container" class="swiper-wrapper">
+                    <!-- product template -->
+                   
+                    
+    
+                </div>
 
             </div>
+
+
 
 
             </div>
@@ -215,10 +227,13 @@
     </main>
 
 
+    <script src="libs/Notyf/notyf.min.js"></script>
+    <script src="./libs/swiper/swiper-bundle.min.js"></script>
     <script src="libs/sweetalert/sweetalert2@11.js"></script>
     <script src="libs/jsCookie/js.cookie.min.js"></script>
     <script type="module" src="js/localTheme.js"></script>
     <script type="module" src="js/cart.js"></script>
+    <script type="module" src="js/slibar.js"></script>
 
 
 </body>

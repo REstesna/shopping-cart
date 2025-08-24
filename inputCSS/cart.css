@@ -29,7 +29,7 @@ body {
     @apply w-full h-full;
 }
 .product_title{
-    @apply text-2xl  capitalize px-2 capitalize; 
+    @apply text-2xl  capitalize px-2 h-[64px]; 
 }
 .product_description {
     @apply text-[var(--second-black-color)] px-2  max-w-full;
@@ -60,4 +60,11 @@ body {
 }
 .last_prodcut #minus__svg-icon {
     @apply hidden;
+}
+
+
+/* /////////////////// */
+
+.swiper-slide{
+    @apply w-[350px]!
 }

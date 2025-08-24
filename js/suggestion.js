@@ -1,4 +1,7 @@
 import { products } from "./main.js";
+import { renderProductsHandler } from "./renderProduct.js";
+
+const sugProductContainer = document.querySelector('#sug-product-container')
 
 export function loadSuggestProductHandler(state) {
 
@@ -37,10 +40,21 @@ export function loadSuggestProductHandler(state) {
 
     for ( let item in group ) {
         
-        suggestProducts.push(group[item].slice(0, 2));
+        suggestProducts.push(group[item].slice(0, 5));
         
     }
+
+    let allSugArr = [];
+
+    suggestProducts.map(s => {
+        
+        allSugArr.push(...s)
+        
+    })
     
-    console.log(suggestProducts);
+    
+    
+
+    renderProductsHandler(sugProductContainer, allSugArr);
     
 }

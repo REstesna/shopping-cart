@@ -3,6 +3,7 @@ import { decreaseProductFromBasketHandler, increaseProductFromBasketHandler, rem
 import { userState } from "./main.js";
 import { renderBasketProducts } from "./renderBasket.js";
 import { loadSuggestProductHandler } from "./suggestion.js";
+import { addToCartHandler } from "./addtocart.js";
 
 export const basketProductContainer = document.querySelector('#basket_product_container');
 
@@ -20,6 +21,12 @@ const swalWithBootstrapButtons = Swal.mixin({
   },
   buttonsStyling: false,
 });
+
+document.addEventListener('click', e => {
+    if ( e.target.closest('button.add-to-cart_btn') ) {   
+        addToCartHandler(e);
+    }    
+})
 
 
 const isUserExist = Cookies.get('username');
@@ -154,7 +161,7 @@ userState.subscribe(sayHiToUserHandler)
 
 document.querySelector('#day_show').innerHTML = daysArr[date.getDay() ];
 
-
+Swal.fire("discount-code is [relax] :))))");
 
 console.log('%c discount-code is [relax] :))))', 'color:yellow;' );
 
