@@ -49,7 +49,7 @@ export async function addToCartHandler(event) {
         swal.fire({
             icon: 'error',
             title: 'Login or signup first.',
-            footer: '<a class="text-lg underline" href="/login.html"> Click to login or signup</a>'
+            footer: '<a class="text-lg underline" href="login.html"> Click to login or signup</a>'
         })
     }
 
