@@ -44,10 +44,10 @@ if (!isUserExist) {
         .then((result) => {
             
             if (result.isConfirmed) {
-                location.href = '/login.html'
+                location.href = './login.html'
                 
             } else {
-                location.href = '/index.html'
+                location.href = './index.html'
 
             }
        

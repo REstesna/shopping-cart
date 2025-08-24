@@ -27,7 +27,7 @@ let countClick = 1;
 let user;
 
 const isUserExist = Cookies.get('username');
-if (isUserExist) location.href = '/index.html';
+if (isUserExist) location.href = './index.html';
 
 
 async function continueToLoginOrSignup () {
@@ -92,7 +92,7 @@ function complateLoginhandler() {
         
 
         Cookies.set('username', user.username, { expires: 3 });
-        location.href = "/index.html";
+        location.href = "./index.html";
 
 
         

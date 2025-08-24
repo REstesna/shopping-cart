@@ -88,7 +88,7 @@ export async function  insertRowInUser(name, basket, password, lastname, usernam
     });
 
     Cookies.set( 'username' ,username);
-    location.href = '/index.html'
+    location.href = './index.html'
 
 
   } catch (err) {
