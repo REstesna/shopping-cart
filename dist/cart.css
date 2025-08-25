@@ -219,6 +219,12 @@
   .z-\[99999\] {
     z-index: 99999;
   }
+  .z-\[99999999999999999999999\] {
+    z-index: 99999999999999999999999;
+  }
+  .z-\[999999999999999999999999999999\] {
+    z-index: 999999999999999999999999999999;
+  }
   .col-span-6 {
     grid-column: span 6 / span 6;
   }
@@ -321,9 +327,6 @@
   }
   .h-8 {
     height: calc(var(--spacing) * 8);
-  }
-  .h-96 {
-    height: calc(var(--spacing) * 96);
   }
   .h-full {
     height: 100%;
@@ -519,6 +522,9 @@
   .bg-red-500 {
     background-color: var(--color-red-500);
   }
+  .bg-white {
+    background-color: var(--color-white);
+  }
   .fill-\[var\(--blue-color\)\] {
     fill: var(--blue-color);
   }
@@ -690,6 +696,10 @@
   .duration-1000 {
     --tw-duration: 1000ms;
     transition-duration: 1000ms;
+  }
+  .select-none {
+    -webkit-user-select: none;
+    user-select: none;
   }
   .backface-hidden {
     backface-visibility: hidden;

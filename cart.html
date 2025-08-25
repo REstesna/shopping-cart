@@ -20,11 +20,15 @@
 
 <body class="">
 
+    <div id="load-parent" class="fixed inset-0 bg-white z-[99999999999999999999999] flex justify-center items-center">
+            <div class="loader"></div>
+    </div>
+
     <nav class="border-b border-[var(--second-white-color)] py-4 ">
 
         <div class="grid grid-cols-2 sm:grid-cols-3 my_container relative">
 
-            <button class="cursor-pointer rotate-180 justify-self-start">
+            <button id="go-back-btn" class="cursor-pointer rotate-180 justify-self-start">
                 <svg class="" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path class="stroke-[var(--main-black-color)]" d="M14.4297 5.92999L20.4997 12L14.4297 18.07"
                         stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
@@ -210,7 +214,7 @@
                 </div>
             </div>
 
-            <div class="swiper">
+            <div class="swiper select-none">
 
                 <div id="sug-product-container" class="swiper-wrapper">
                     <!-- product template -->
@@ -230,13 +234,14 @@
     </main>
 
 
+    <script src="./js/loader.js"></script>
     <script src="libs/Notyf/notyf.min.js"></script>
     <script src="./libs/swiper/swiper-bundle.min.js"></script>
     <script src="libs/sweetalert/sweetalert2@11.js"></script>
     <script src="libs/jsCookie/js.cookie.min.js"></script>
     <script type="module" src="js/localTheme.js"></script>
     <script type="module" src="js/cart.js"></script>
-    <script type="module" src="js/slibar.js"></script>
+    <script type="module" src="js/slider.js"></script>
 
 
 </body>

@@ -13,6 +13,8 @@ const checkoutPriceElems = document.querySelectorAll('.checkout_price');
 
 const welcomeToUserElem = document.querySelector('#welcome-to-user');
 
+const goBackBtn = document.querySelector('#go-back-btn');
+
 
 const swalWithBootstrapButtons = Swal.mixin({
   customClass: {
@@ -159,7 +161,7 @@ function sayHiToUserHandler(state){
 userState.subscribe(sayHiToUserHandler)
 
 
-
+//////// dis count code 
 document.querySelector('#day_show').innerHTML = daysArr[date.getDay() ];
 
 setTimeout( () => {
@@ -168,6 +170,12 @@ setTimeout( () => {
 
 console.log('%c discount-code is [relax] :))))', 'color:yellow;' );
 
+//////////////
+
 userState.subscribe(loadSuggestProductHandler);
 
 confirmDiscountBtn.addEventListener('click', discountHandler);
+
+goBackBtn.addEventListener('click', () => {
+    history.back();
+})

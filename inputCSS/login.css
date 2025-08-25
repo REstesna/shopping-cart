@@ -17,19 +17,30 @@
 
 
 
-.loader {
+/* .loader {
   width: 15px;
   aspect-ratio: 1;
   border-radius: 50%;
   animation: l5 1s infinite linear alternate;
 }
 @keyframes l5 {
-    0%  {box-shadow: 20px 0 #000, -20px 0 #0002;background: #000 }
-    33% {box-shadow: 20px 0 #000, -20px 0 #0002;background: #0002}
-    66% {box-shadow: 20px 0 #0002,-20px 0 #000; background: #0002}
-    100%{box-shadow: 20px 0 #0002,-20px 0 #000; background: #000 }
-}
+    0%  {box-shadow: 20px 0 #F8F7F8 , -20px 0 #868486;background: #F8F7F8 }
+    33% {box-shadow: 20px 0 #F8F7F8 , -20px 0 #acaaac;background: #acaaac}
+    66% {box-shadow: 20px 0 #acaaac ,-20px 0 #F8F7F8; background: #acaaac}
+    100%{box-shadow: 20px 0 #acaaac ,-20px 0 #F8F7F8; background: #F8F7F8 }
+} */
 
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 30px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 4px solid;
+  border-color: #fff #0000;
+  animation: l1 1s infinite;
+}
+@keyframes l1 {to{transform: rotate(.5turn)}}
 
 
 #close-eye-icon{

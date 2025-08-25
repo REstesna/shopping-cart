@@ -8,8 +8,10 @@ window.addEventListener('load', () => {
 
 function setThemeOnLocal() {
     const localTheme = getLocalStorage('theme');
+
+
     
-    localTheme == 'dark'
-        ? document.body.classList.add('dark_theme')
-        : document.body.classList.remove('dark_theme'); 
+    localTheme == 'light'
+        ? document.body.classList.remove('dark_theme')
+        : document.body.classList.add('dark_theme'); 
 }

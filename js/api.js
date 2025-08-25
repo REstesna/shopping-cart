@@ -36,10 +36,9 @@ export async function getUserFromSUPA(username) {
   } catch (err) {
 
     Swal.fire({
-        icon: "error",
-        title: "Something went wrong...",
-        text: "try another username!",
-      });
+        title: 'Check your internet and try again',
+        icon: 'error'
+    })
 
     return;
   }

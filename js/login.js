@@ -29,8 +29,12 @@ let user;
 const isUserExist = Cookies.get('username');
 if (isUserExist) location.href = './index.html';
 
+window.addEventListener('DOMContentLoaded', () => {
+    usernameInputElem.focus();
+});
 
 async function continueToLoginOrSignup () {
+
 
     loginBtn.disabled = true;
     usernameInputElem.disabled = true;
@@ -50,9 +54,11 @@ async function continueToLoginOrSignup () {
     if (user.status === 'login') {
 
         LoginContainerElem.classList.add('login');
+        setTimeout( () => {loginPassworInput.focus()} ,600);
 
     } else if (user.status === 'signup') {
         LoginContainerElem.classList.add('signup');
+        setTimeout( () => {signupName.focus()} ,400)
     }
     
     loginBtn.disabled = false;
@@ -84,16 +90,13 @@ function complateLoginhandler() {
 
     
     if ( loginPassworInput.value === user.password ) {
+        
         console.log('logged in');
 
-        
-
         console.log(user.username);
-        
 
         Cookies.set('username', user.username, { expires: 3 });
         location.href = "./index.html";
-
 
         
     } else {
@@ -121,15 +124,52 @@ async function complateSignupHandler() {
 // add event listeners
 loginBtn.addEventListener("click", e => {
 
+    if (usernameInputElem.value.trim() === ''){
+            Swal.fire({
+            icon:'error',
+            title: 'Please fill in all fields.',
+            showConfirmButton: false,
+            showDenyButton: true,
+            allowEnterKey: false,
+                })
+            return;
+        }
+
     if (countClick === 1) {
         continueToLoginOrSignup();
     } else {
-        validateInpusHandler(e);
+        validateInpusHandler();
     }
     countClick++
 });
 
+document.addEventListener('keypress', e => {
 
+    if( e.charCode === 13 ) {
+
+        if (usernameInputElem.value.trim() === ''){
+            Swal.fire({
+            icon:'error',
+            title: 'Please fill in all fields.',
+            showConfirmButton: false,
+            showDenyButton: true,
+            allowEnterKey: false,
+                })
+            return;
+        }
+
+        if (countClick === 1) {
+                continueToLoginOrSignup();
+            } else {
+                validateInpusHandler();
+            }
+            countClick++
+
+
+    }
+    
+
+})
 
 
 function limitCharInputHandler(input, span, limit) {
@@ -175,7 +215,6 @@ showPasswordHandler(showingSignupPass, showPasswordBtn, signupPassword)
 
 usernameInputElem.addEventListener('input', () => {
     usernameInputElem.value = usernameInputElem.value.replace(/[^A-Za-z0-9_]/g, '');
-    
 });
 
 loginPassworInput.addEventListener('input', () => {

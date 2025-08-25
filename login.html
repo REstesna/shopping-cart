@@ -16,6 +16,10 @@
 
 <body class="text-[var(--main-black-color)] bg-[var(--main-white-color)] dark_theme">
 
+    <div id="load-parent" class="fixed inset-0 bg-white z-[99999999999999999999999] flex justify-center items-center">
+            <div class="loader"></div>
+    </div>
+
     <nav class="border-b border-[var(--second-white-color)] py-4 flex justify-center items-center">
         <a href="./index.html" class="flex justify-center items-center gap-4">
             <img src="icon/fav.png" class="w-8 h-8" alt="">
@@ -176,6 +180,7 @@
     </form>
 
 
+    <script src="./js/loader.js"></script>
     <script src="libs/jsCookie/js.cookie.min.js"></script>
     <script src="libs/sweetalert/sweetalert2@11.js"></script>
     <script type="module" src="js/localTheme.js"></script>
