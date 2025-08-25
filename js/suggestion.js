@@ -40,7 +40,7 @@ export function loadSuggestProductHandler(state) {
 
     for ( let item in group ) {
         
-        suggestProducts.push(group[item].slice(0, 5));
+        suggestProducts.push(group[item].slice(0, 2));
         
     }
 

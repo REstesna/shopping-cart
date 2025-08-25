@@ -39,7 +39,6 @@ let swiper = new Swiper('.swiper', {
    slidesPerView: "auto",
    spaceBetween: 30,
 
-   loop: true,
 
    autoplay: {
    delay: 5000,
@@ -55,6 +54,8 @@ let swiper = new Swiper('.swiper', {
       nextEl: '#s-next',
       prevEl: '#s-prev',
     },
+
+    grabCursor: true,
 });
   
 // setTimeout ( () => {
