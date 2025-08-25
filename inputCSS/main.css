@@ -77,7 +77,7 @@ button {
 
 
 /* HTML: <div class="loader"></div> */
-.loader {
+.page-loader {
   height: 4px;
   width: 130px;
   --c:no-repeat linear-gradient(#006aff 0 0);

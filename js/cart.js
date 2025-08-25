@@ -177,5 +177,5 @@ userState.subscribe(loadSuggestProductHandler);
 confirmDiscountBtn.addEventListener('click', discountHandler);
 
 goBackBtn.addEventListener('click', () => {
-    history.back();
+    location.href = './index.html';
 })
