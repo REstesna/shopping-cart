@@ -4,8 +4,12 @@ import { userState } from "./main.js";
 import { renderBasketProducts } from "./renderBasket.js";
 import { loadSuggestProductHandler } from "./suggestion.js";
 import { addToCartHandler } from "./addtocart.js";
+import {  exportCartPDFHandler } from "./exportCart.js";
 
 export const basketProductContainer = document.querySelector('#basket_product_container');
+
+
+
 
 const discountInputElem = document.querySelector('#discount_input');
 const confirmDiscountBtn = document.querySelector('#confirm_discount');
@@ -15,6 +19,7 @@ const welcomeToUserElem = document.querySelector('#welcome-to-user');
 
 const goBackBtn = document.querySelector('#go-back-btn');
 
+const exportCartBtn = document.querySelector('#export-cart');
 
 const swalWithBootstrapButtons = Swal.mixin({
   customClass: {
@@ -178,4 +183,7 @@ confirmDiscountBtn.addEventListener('click', discountHandler);
 
 goBackBtn.addEventListener('click', () => {
     location.href = './index.html';
-})
+});
+
+
+exportCartBtn.addEventListener('click', exportCartPDFHandler)

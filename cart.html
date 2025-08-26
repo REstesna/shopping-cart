@@ -15,6 +15,7 @@
 
     <!-- <base href="/shopping-cart/"> -->
 
+
     <title>Cart</title>
 </head>
 
@@ -177,12 +178,24 @@
                         <span id="" class="checkout_price text-[var(--second-black-color)]">$134.56</span>
                     </div>
                     <button
-                        class="main-font-300 text-[var(--static-white-color)] bg-[var(--blue-color)] w-full text-[var(--main-white-color)] flex justify-between rounded-full cursor-pointer px-4 py-3">
+                        class="main-font-300 text-[var(--static-white-color)] bg-[var(--blue-color)] w-full  flex justify-between rounded-full cursor-pointer px-4 py-3">
                         <div class="flex items-center gap-2">
                             <div><img src="icon/card.svg" alt="cardIcon"></div>
                             <span class="main-font-700 ">Checkout</span>
                         </div>
                         <span class="checkout_price">$134.56</span>
+                    </button>
+
+                    <hr class="my-4 border-[var(--second-white-color)]">
+
+
+                    <button id="export-cart"
+                        class="main-font-300 text-[var(--static-white-color)] bg-[var(--blue-color)] w-full  flex justify-center rounded-full cursor-pointer px-4 py-1">
+                        <div class="flex items-center gap-2 ">
+                            <div><img src="icon/export.svg" alt="cardIcon"></div>
+                            <span class="main-font-700 ">Export Cart</span>
+                        </div>
+                        
                     </button>
                 </div>
             </div>
@@ -234,7 +247,9 @@
     </main>
 
 
+
     <script src="./js/loader.js"></script>
+    <script src="./libs/jsPDF/jspdf.umd.min.js"></script>
     <script src="libs/Notyf/notyf.min.js"></script>
     <script src="./libs/swiper/swiper-bundle.min.js"></script>
     <script src="libs/sweetalert/sweetalert2@11.js"></script>
