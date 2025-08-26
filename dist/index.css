@@ -258,6 +258,9 @@
   .my-2 {
     margin-block: calc(var(--spacing) * 2);
   }
+  .my-4 {
+    margin-block: calc(var(--spacing) * 4);
+  }
   .my-5 {
     margin-block: calc(var(--spacing) * 5);
   }
@@ -297,6 +300,9 @@
   .block {
     display: block;
   }
+  .contents {
+    display: contents;
+  }
   .flex {
     display: flex;
   }
@@ -311,6 +317,9 @@
   }
   .inline-block {
     display: inline-block;
+  }
+  .table {
+    display: table;
   }
   .size-6 {
     width: calc(var(--spacing) * 6);
@@ -380,6 +389,9 @@
   .grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
   .grid-cols-6 {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
@@ -419,6 +431,9 @@
   .gap-8 {
     gap: calc(var(--spacing) * 8);
   }
+  .justify-self-end {
+    justify-self: flex-end;
+  }
   .justify-self-start {
     justify-self: flex-start;
   }
@@ -445,10 +460,6 @@
     border-style: var(--tw-border-style);
     border-width: 2px;
   }
-  .border-r {
-    border-right-style: var(--tw-border-style);
-    border-right-width: 1px;
-  }
   .border-r-2 {
     border-right-style: var(--tw-border-style);
     border-right-width: 2px;
@@ -469,9 +480,6 @@
   }
   .border-red-500 {
     border-color: var(--color-red-500);
-  }
-  .border-r-\[var\(--\)\] {
-    border-right-color: var(--);
   }
   .border-r-\[var\(--second-black-color\)\] {
     border-right-color: var(--second-black-color);
@@ -507,12 +515,6 @@
     background-color: var(--main-white-color);
     @supports (color: color-mix(in lab, red, red)) {
       background-color: color-mix(in oklab, var(--main-white-color) 80%, transparent);
-    }
-  }
-  .bg-\[var\(--second-black-color\)\]\/90 {
-    background-color: var(--second-black-color);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--second-black-color) 90%, transparent);
     }
   }
   .bg-\[var\(--second-white-color\)\]\/50 {
@@ -643,9 +645,6 @@
   .text-\[var\(--main-black-color\)\] {
     color: var(--main-black-color);
   }
-  .text-\[var\(--main-white-color\)\] {
-    color: var(--main-white-color);
-  }
   .text-\[var\(--second-black-color\)\] {
     color: var(--second-black-color);
   }
@@ -664,6 +663,9 @@
   .text-white {
     color: var(--color-white);
   }
+  .italic {
+    font-style: italic;
+  }
   .underline {
     text-decoration-line: underline;
   }
@@ -680,6 +682,10 @@
   .outline-0 {
     outline-style: var(--tw-outline-style);
     outline-width: 0px;
+  }
+  .grayscale {
+    --tw-grayscale: grayscale(100%);
+    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
   .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
