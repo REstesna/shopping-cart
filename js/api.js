@@ -6,6 +6,7 @@ let aut =
 export async function getUserFromSUPA(username) {
 
   try {
+
     const res = await fetch(`${apiURL}?select=*&username=eq.${username}`, {
       method: "GET",
       headers: {
@@ -33,12 +34,13 @@ export async function getUserFromSUPA(username) {
         text: "try another username!",
       });
     }
+
   } catch (err) {
 
-    Swal.fire({
-        title: 'Check your internet and try again',
-        icon: 'error'
-    })
+    // Swal.fire({
+    //     title: 'Check your internet and try again',
+    //     icon: 'error'
+    // })
 
     return;
   }

@@ -46,7 +46,7 @@ if (!isUserExist) {
           icon: "warning",
           showCancelButton: true,
           confirmButtonText: "Login page!",
-          cancelButtonText: "Home page",
+          cancelButtonText: "Home page!",
           reverseButtons: true,
         })
         .then((result) => {
@@ -166,7 +166,7 @@ function sayHiToUserHandler(state){
 userState.subscribe(sayHiToUserHandler)
 
 
-//////// dis count code 
+//////// discount code 
 document.querySelector('#day_show').innerHTML = daysArr[date.getDay() ];
 
 setTimeout( () => {
